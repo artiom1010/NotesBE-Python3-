@@ -1,0 +1,12 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+  <p>You have been logged out. Thank you for visiting!</p>
+  
+  <form method="post" action="{% url 'users:logged_out' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+  </form>
+
+{% endblock content %}
